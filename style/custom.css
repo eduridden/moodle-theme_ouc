@@ -13,22 +13,6 @@
       	 url('ouc/style/font/OpenSans-Light-webfont.svg') format('svg');
 }
 
-a.logo {
-    background: url([[setting:logo]]) no-repeat 0 0;
-    display: block;
-    float: left;
-    height: 75px;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-.dir-rtl a.logo {
-    background: url([[setting:logo]]) no-repeat 100% 0;
-    display: block;
-    float: right;
-}
-
 body{
     background: white;
     line-height: 25px;
@@ -104,12 +88,21 @@ hr {
 
 /* @group Header */
 
-.logo {
-	background: url([[pix:theme|logo]]) no-repeat;
+.setlogo {
+	background: url([[pix:theme|logo]]) no-repeat 0 0;
 	width: 270px;
 	height: 70px;
 	margin: 15px;
 	margin-left: 30px;
+}
+
+.logo {
+    background: url([[setting:logo]]) no-repeat 0 0;
+    background-size: contain;
+    width: 270px;
+    height: 70px;
+    margin: 15px;
+    margin-left: 30px;
 }
 
 .mainheader {
@@ -147,7 +140,6 @@ hr {
 	text-transform: none;
 	text-shadow: 0.1em 0.1em 0.5em rgba(0,0,0,0.5);
 	font-size: 1.4em;
-	display: inline;
 	line-height: 30px;
 }
 
@@ -161,7 +153,6 @@ hr {
 }
 
 .coursetitle {
-	float: left;
 	margin: 0px;
 }
 

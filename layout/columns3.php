@@ -26,6 +26,7 @@
 
 // Get the HTML for the settings bits.
 $html = theme_ouc_get_html_for_settings($OUTPUT, $PAGE);
+$haslogo = (!empty($PAGE->theme->settings->logo));
 
 $pre = 'side-pre';
 $post = 'side-post';
@@ -68,20 +69,26 @@ echo $OUTPUT->doctype() ?>
 
 <header role="banner" class="navbar <?php echo $html->navbarclass ?>">
 	<div class="row-fluid mainheader">
-	<div class="span5">
-		<div class="logo"></div>
+	<div class="span3">
+	<?php if (!$haslogo) { ?>
+        <div class="setlogo"></div>
+    <?php } else { ?>
+         <a href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"><div class="logo"></div></a>
+    <?php } ?>
 	</div>
-	<div class="span6 coursename">
-		<?php echo $html->heading; ?><h1 class="coursetitle"><span id="lightblue">Course</span>&nbsp;:&nbsp;</h1>
+	
+	<div class="span8 coursename">
+		<h1 class="coursetitle"><span id="lightblue">Course</span>&nbsp;:&nbsp;<?php echo $PAGE->heading ?></h1>
 		<p>Centre for Professional Learning and Development (OLPD)</p>
 	</div>
-	<?php if (isloggedin()) { ?>
-        <div class="span1 pull-right" id="profilepic">
+	
+    <div class="span1 pull-right" id="profilepic">
+    	<?php if (isloggedin()) { ?>
 			<a href="<?php echo $CFG->wwwroot.'/user/profile.php?id='.$USER->id; ?>">
 			<?php echo $OUTPUT->user_picture($USER); ?>
-			</a>         
-        </div>
-        <?php } ?>
+			</a> 
+		<?php } ?>        
+    </div>
 	</div>
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
