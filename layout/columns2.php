@@ -64,18 +64,33 @@ echo $OUTPUT->doctype() ?>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
     <!-- Google web fonts -->
     <link href='//fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
 </head>
 
-<body <?php echo $OUTPUT->body_attributes('two-column'); ?>>
+<body <?php echo $OUTPUT->body_attributes(); ?>>
 
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
-<header role="banner" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?>">
+<header role="banner" class="navbar <?php echo $html->navbarclass ?>">
+	<div class="row-fluid mainheader">
+	<div class="span5">
+		<div class="logo"></div>
+	</div>
+	<div class="span6 coursename">
+		<?php echo $html->heading; ?><h1 class="coursetitle"><span id="lightblue">Course</span>&nbsp;:&nbsp;</h1>
+		<p>Centre for Professional Learning and Development (OLPD)</p>
+	</div>
+	<?php if (isloggedin()) { ?>
+        <div class="span1 pull-right" id="profilepic">
+			<a href="<?php echo $CFG->wwwroot.'/user/profile.php?id='.$USER->id; ?>">
+			<?php echo $OUTPUT->user_picture($USER); ?>
+			</a>         
+        </div>
+        <?php } ?>
+	</div>
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
-            <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo $SITE->shortname; ?></a>
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <a class="brand" href="<?php echo $CFG->wwwroot;?>"><i class="icon-home"></i> <?php echo $SITE->shortname; ?></a>
+            <a class="btn btn-navbar" data-toggle="workaround-collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
