@@ -1,0 +1,564 @@
+/* OUC Custom CSS
+-------------------------*/
+
+/* @group Core */
+@font-face {
+    font-family: 'Open Sans'; 
+    font-weight: normal;
+    font-style: normal;
+    src: url('ouc/style/font/OpenSans-Light-webfont.eot');
+    src: url('ouc/style/font/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), 
+      	 url('ouc/style/font/OpenSans-Light-webfont.woff') format('woff'), 
+      	 url('ouc/style/font/OpenSans-Light-webfont.ttf?') format('truetype'), 
+      	 url('ouc/style/font/OpenSans-Light-webfont.svg') format('svg');
+}
+
+a.logo {
+    background: url([[setting:logo]]) no-repeat 0 0;
+    display: block;
+    float: left;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.dir-rtl a.logo {
+    background: url([[setting:logo]]) no-repeat 100% 0;
+    display: block;
+    float: right;
+}
+
+body{
+    background: white;
+    line-height: 25px;
+    text-shadow: none !important;
+    padding-top: 0px;
+    border-top:  4px solid #113c66;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #808080;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Oswald", sans-serif;
+    font-weight: normal !important;
+    color: #666;
+}
+
+h3 {
+    font-size: 20px;
+    color: #888;
+    line-height: 20px;
+}
+
+a {
+	color: #7ca4d8;
+}
+
+.smallicon {
+	color: #ccc;
+}
+
+button, input.form-submit, input[type="button"], input[type="submit"], input[type="reset"] {
+	background: #a6c6f0;
+}
+
+/* @end */
+
+/* @group Regions */
+
+#region-main {
+    background: transparent;
+}
+
+#region-main-ouc {
+    background: transparent;
+    padding: 0px 0px 24px;
+    margin: 0 auto;
+}
+
+#region-main > div {
+    padding: 10px;
+}
+
+/* @end */
+
+/* @group Header */
+
+.logo {
+	background: url([[pix:theme|logo]]) no-repeat;
+	width: 270px;
+	height: 70px;
+	margin: 15px;
+	margin-left: 30px;
+}
+
+.mainheader {
+	background: #09386e; /* Old browsers */
+	background: -moz-linear-gradient(left,  #09386e 0%, #77a6de 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#09386e), color-stop(100%,#77a6de)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #09386e 0%,#77a6de 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #09386e 0%,#77a6de 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #09386e 0%,#77a6de 100%); /* IE10+ */
+	background: linear-gradient(to right,  #09386e 0%,#77a6de 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#09386e', endColorstr='#77a6de',GradientType=1 ); /* IE6-9 */
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 0px;
+	font-size: 1.2em;
+}
+
+#profilepic img {
+	border: 3px solid #fff;
+	border-radius: 5px;
+	margin-right: 30px;
+	margin-top: 35px;
+}
+
+#profilepic {
+	text-align: right;
+}
+
+.coursename {
+	padding-left: 30px;
+	padding-top: 28px;
+}
+.coursename h1 {
+	color: #fff;
+	text-transform: none;
+	text-shadow: 0.1em 0.1em 0.5em rgba(0,0,0,0.5);
+	font-size: 1.4em;
+	display: inline;
+	line-height: 30px;
+}
+
+.coursename p {
+	font-size: .8em;
+	text-transform: none;
+}
+
+#lightblue {
+	color: #99c0ef;
+}
+
+.coursetitle {
+	float: left;
+	margin: 0px;
+}
+
+/* @end */
+
+/* @group Navbar
+ */
+.navbar {
+	margin-bottom: 5px;
+}
+
+.navbar .caret {
+	margin-left: 5px;
+}
+.navbar-inner {
+	background: #75a4dc;
+	color: #fff;
+	border: 0px none;
+	border-radius: 0px;
+	border-top: 1px solid #fff;
+}
+
+.navbar-text,
+.navbar .logininfo a {
+	color: #fff;
+}
+
+.navbar .brand,
+.navbar .nav>li>a,
+.navbar .nav>li>a:hover {
+	color: #fff;
+	text-shadow: none;
+	border-right: 1px solid #6699cc;
+}
+
+.navbar .nav {
+	margin: 0px;
+}
+.navbar .nav>li>a:hover,
+.nav-collapse .nav>li>a:hover, 
+.nav-collapse .dropdown-menu a:hover {
+	background: #6699cc;
+	color: #fff;
+}
+
+.navbar .nav li.dropdown.open>.dropdown-toggle, 
+.navbar .nav li.dropdown.active>.dropdown-toggle, 
+.navbar .nav li.dropdown.open.active>.dropdown-toggle {
+	background-color: #6699cc;
+	color: #fff;
+}
+
+.navbar .btn-navbar,
+.navbar .btn-navbar:hover, 
+.navbar .btn-navbar:focus, 
+.navbar .btn-navbar:active, 
+.navbar .btn-navbar.active, 
+.navbar .btn-navbar.disabled, 
+.navbar .btn-navbar[disabled],
+.navbar .nav li.dropdown.open>.dropdown-toggle, 
+.navbar .nav li.dropdown.active>.dropdown-toggle, 
+.navbar .nav li.dropdown.open.active>.dropdown-toggle {
+	background: #6699cc;
+}
+
+.nav-collapse .nav>li>a:hover {
+	background: #6699cc;
+	color: #fff;
+}
+
+.nav-collapse .nav>li>a {
+	color: #fff;
+}
+
+.nav-collapse .dropdown-menu a {
+	color: #000;
+}
+
+#page-navbar {
+	-webkit-box-shadow: 0 4px 2px -2px rgba(0,0,0,0.05);
+	-moz-box-shadow: 0 4px 2px -2px rgba(0,0,0,0.05);
+	box-shadow: 0 4px 2px -2px rgba(0,0,0,0.05);	
+}
+/* @end */
+
+/* @group Breadcrumb */
+
+.breadcrumb {
+    padding: 0px;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 12px;
+    background: transparent;
+    margin: 0px;
+}
+
+.breadcrumb:before {
+	content: "Navigation: ";
+}
+
+.breadcrumb-button {
+    margin-top: -4px;
+}
+
+ul.breadcrumb span.divider {
+	display: none;
+}
+
+ul.breadcrumb li:after { 
+	content: "/";
+	font-family: FontAwesome;
+	font-size: 1.1em;
+	margin: 0px 6px 0px 3px;
+	color: #bbb;
+}
+
+ul.breadcrumb li:last-child:after { 
+	content: none; 
+}
+
+/* @end */
+
+/* @group Blocks */
+
+
+.block {
+    background: white;
+    padding: 8px;
+    border: 0px none;
+    margin-bottom: 10px;
+}
+
+.block #icon {
+	margin-right: 5px;
+	color: #999;
+}
+
+.tree_item {
+	background-image: none !important;
+}
+
+.tree_item.branch:before { 
+	font-family: FontAwesome;
+	content: "\f07c ";
+	color: #999;
+	margin-right: 5px;
+}
+
+.block_navigation.block li.depth_1 .tree_item.branch:before {
+	content: "\f015 ";
+}
+
+.block_navigation.block li.depth_2 .tree_item.branch:before {
+	content: "\f07b ";
+}
+
+.block_navigation.block li.depth_2 {
+	margin-left: -20px;
+}
+
+.collapsed .tree_item.branch:before { 
+	font-family: FontAwesome;
+	content: "\f07b ";
+	color: #999;
+	margin-right: 5px;
+}
+
+.block .header .title h2 {
+    font-size: 14px;
+    font-size: 1.2em;
+    color: #4474a5;
+    line-height: 26px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: normal;
+    padding: 0px;
+}
+
+.block .header .title h2:before {
+    font-family: FontAwesome;
+    font-size: 1.4em;
+    margin-right: .3em;
+    color: #999;
+    content: "\f0c9";
+}
+
+.block .header .title {
+    border-bottom: 1px solid #EEE;
+    padding-left: 0px;
+}
+
+.block.hidden .header .title h2,
+.block.hidden h3.main,
+.block.hidden .header .title {
+	border-bottom: none;
+	margin-bottom: 0px;
+}
+
+.block_quiz_results {
+    text-align: left;
+}
+
+.block_login label {
+	font-family: "Oswald", sans-serif;
+	font-weight: normal !important;
+}
+
+.block_myprofile .content {
+
+}
+
+.block_myprofile .content .profilepicture {
+	border-radius: 10px;
+	float: left;
+	margin-right: 15px;
+}
+
+.block_myprofile .content .profilepicture {
+	border-radius: 10px;
+	float: left;
+}
+
+.block_myprofile .content .fullname {
+	color: #000;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+.block_myprofile .content .email {
+	padding-top: 5px;
+}
+
+
+
+/* @group Block Icons */
+
+.dir-rtl .collapsed .tree_item.branch:before { 
+	content: " \f053";
+}
+
+.block_news_items .header .title h2:before {
+    content:"\f0a1";
+}
+
+.block_navigation .header .title h2:before {
+    content:"\f0e8";
+}
+
+.block_calendar_upcoming .header .title h2:before,
+.block_calendar_month .header .title h2:before {
+    content:"\f073";
+}
+
+.block_course_list .header .title h2:before {
+    content:"\f108";
+}
+
+.block_completionstatus .header .title h2:before,
+.block_selfcompletion .header .title h2:before {
+    content:"\f0e4";
+}
+
+.block_rss_client .header .title h2:before {
+    content:"\f09e";
+}
+
+.block_blog_menu .header .title h2:before {
+    content:"\f02d";
+}
+
+.block_quiz_results .header .title h2:before {
+    content:"\f080";
+}
+
+.block_quiz_navblock .header .title h2:before {
+    content:"\f126";
+}
+
+.block_glossary_random .header .title h2:before {
+    content:"\f0eb";
+}
+
+.block_book_toc .header .title h2:before {
+    content:"\f02d";
+}
+
+
+.block_participants .header .title h2:before,
+.block_online_users .header .title h2:before {
+    content:"\f0c0";
+}
+
+.block_html .header .title h2:before {
+    content:"\f022";
+}
+
+.block_section_links .header .title h2:before {
+    content:"\f02e";
+}
+
+.block_activity_modules .header .title h2:before {
+    content:"\f12e";
+}
+
+.block_comments .header .title h2:before {
+    content:"\f075";
+}
+
+.block_settings .header .title h2:before {
+    content:"\f085";
+}
+
+.block_admin_bookmarks .header .title h2:before{
+    content:"\f02e";
+}
+
+.block_blog_tags .header .title h2:before,
+.block_tags .header .title h2:before {
+    content:"\f02c";
+}
+
+.block_private_files .header .title h2:before {
+    content:"\f114";
+}
+
+.block_block_mentees .header .title h2:before {
+    content:"\f0c0";
+}
+
+.block_messages .header .title h2:before {
+    content:"\f0e0";
+}
+
+.block_community .header .title h2:before {
+    content:"\f0ac";
+}
+
+.block_login .header .title h2:before {
+    content:"\f007";
+}
+
+.block_recent_activity .header .title h2:before {
+    content:"\f017";
+}
+
+.block_search_forums .header .title h2:before {
+    content:"\f0e6";
+}
+
+.block_myprofile .header .title h2:before {
+    content:"\f007";
+}
+
+.block_adminblock .header .title h2:before {
+    content:"\f009";
+}
+
+.block_feedback .header .title h2:before {
+    content:"\f087";
+}
+
+.block_flickr .header .title h2:before {
+    content:"\f03e";
+}
+
+.block_youtube .header .title h2:before {
+    content:"\f145";
+}
+
+.block_course_badges .header .title h2:before {
+    content:"\f091";
+}
+
+.block_twitter_search .header .title h2:before {
+    content:"\f099";
+}
+
+
+
+/* @end */
+
+/* @end */
+
+/* @group Course */
+
+h3.sectionname {
+	background: #09386e; /* Old browsers */
+	background: -moz-linear-gradient(left,  #09386e 0%, #77a6de 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#09386e), color-stop(100%,#77a6de)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #09386e 0%,#77a6de 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #09386e 0%,#77a6de 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #09386e 0%,#77a6de 100%); /* IE10+ */
+	background: linear-gradient(to right,  #09386e 0%,#77a6de 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#09386e', endColorstr='#77a6de',GradientType=1 ); /* IE6-9 */
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 5px;
+	padding: 5px;
+	font-size: 1.2em;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: none;
+}
+
+.section li.activity {
+	border-bottom: 1px dashed #ccc;
+	padding: 5px 0;
+}
+
+.course-content .current {
+background-color: #d9edf7;
+}
+
+/* @end */
+
+/* Custom CSS Settings
+-------------------------*/
+[[setting:customcss]]
