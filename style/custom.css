@@ -66,6 +66,7 @@ input[type="button"],
 input[type="submit"], 
 input[type="reset"] {
 	background: #a6c6f0;
+	text-shadow: none;
 }
 
 button:hover, 
@@ -75,6 +76,10 @@ input[type="submit"]:hover,
 input[type="reset"]:hover {
 	background: #6699cc;
 	color: #fff;
+}
+
+hr {
+	border-top: 1px dotted #ccc;
 }
 
 /* @end */
@@ -542,7 +547,8 @@ ul.breadcrumb li:last-child:after {
 
 /* @group Course */
 
-h3.sectionname {
+h3.sectionname,
+#page-site-index .headingblock {
 	background: #09386e; /* Old browsers */
 	background: -moz-linear-gradient(left,  #09386e 0%, #77a6de 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#09386e), color-stop(100%,#77a6de)); /* Chrome,Safari4+ */
@@ -560,6 +566,10 @@ h3.sectionname {
 	text-transform: none;
 }
 
+#page-site-index .headingblock {
+	line-height: 20px;
+}
+
 .section li.activity {
 	border-bottom: 1px dashed #ccc;
 	padding: 5px 0;
@@ -569,6 +579,13 @@ h3.sectionname {
 background-color: #d9edf7;
 }
 
+.coursebox {
+	border-radius: 5px;
+}
+
+.coursebox .content {
+	padding: 10px;
+}
 /* @end */
 
 /* Custom CSS Settings
