@@ -61,8 +61,20 @@ a {
 	color: #ccc;
 }
 
-button, input.form-submit, input[type="button"], input[type="submit"], input[type="reset"] {
+button, input.form-submit, 
+input[type="button"], 
+input[type="submit"], 
+input[type="reset"] {
 	background: #a6c6f0;
+}
+
+button:hover, 
+input.form-submit:hover, 
+input[type="button"]:hover, 
+input[type="submit"]:hover, 
+input[type="reset"]:hover {
+	background: #6699cc;
+	color: #fff;
 }
 
 /* @end */
